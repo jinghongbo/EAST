@@ -48,7 +48,7 @@ Please cite his [paper](https://arxiv.org/abs/1704.03155v2) if you find this use
 ### Docker 
 1. docker pull jinghongbo/east
 2. docker run -d --name east -p 8769:8769 -v /data:/data  jinghongbo/east
-3. docker exec -it exec bash
+3. docker exec -it east bash
 ### Train
 If you want to train the model, you should provide the dataset path, in the dataset path, a separate gt text file should be provided for each image
 and run
