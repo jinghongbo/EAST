@@ -38,7 +38,7 @@ Please cite his [paper](https://arxiv.org/abs/1704.03155v2) if you find this use
 3. [Test](#train)
 4. [Train](#test)
 5. [Examples](#examples)
-6. [Download](#docker)
+6. [Docker](#docker)
 
 ### Installation
 1. Any version of tensorflow version > 1.0 should be ok.
