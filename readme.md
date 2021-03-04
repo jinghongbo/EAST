@@ -38,6 +38,7 @@ Please cite his [paper](https://arxiv.org/abs/1704.03155v2) if you find this use
 3. [Test](#train)
 4. [Train](#test)
 5. [Examples](#examples)
+6. [Download](#docker)
 
 ### Installation
 1. Any version of tensorflow version > 1.0 should be ok.
@@ -45,10 +46,7 @@ Please cite his [paper](https://arxiv.org/abs/1704.03155v2) if you find this use
 ### Download
 1. Models trained on ICDAR 2013 (training set) + ICDAR 2015 (training set): [BaiduYun link](http://pan.baidu.com/s/1jHWDrYQ) [GoogleDrive](https://drive.google.com/open?id=0B3APw5BZJ67ETHNPaU9xUkVoV0U)
 2. Resnet V1 50 provided by tensorflow slim: [slim resnet v1 50](http://download.tensorflow.org/models/resnet_v1_50_2016_08_28.tar.gz)
-### Docker 
-1. docker pull jinghongbo/east
-2. docker run -d --name east -p 8769:8769 -v /data:/data  jinghongbo/east
-3. docker exec -it east bash
+
 ### Train
 If you want to train the model, you should provide the dataset path, in the dataset path, a separate gt text file should be provided for each image
 and run
@@ -67,7 +65,7 @@ See the examples in training_samples/**
 ### Demo
 If you've downloaded the pre-trained model, you can setup a demo server by
 ```
-python3 run_demo_server.py --checkpoint-path /data/east_icdar2015_resnet_v1_50_rbox/
+python3 run_demo_server.py --checkpoint_path /data/east_icdar2015_resnet_v1_50_rbox/
 ```
 Then open http://localhost:8769 for the web demo. Notice that the URL will change after you submitted an image.
 Something like `?r=49647854-7ac2-11e7-8bb7-80000210fe80` appends and that makes the URL persistent.
@@ -101,3 +99,8 @@ Here are some test examples on icdar2015, enjoy the beautiful text boxes!
   + See https://github.com/argman/EAST/issues/120
 
 Please let me know if you encounter any issues(my email boostczc@gmail dot com).
+
+### Docker 
+1. docker pull jinghongbo/east
+2. docker run -d --name east -p 8769:8769 -v /data:/data  jinghongbo/east
+3. docker exec -it east bash
