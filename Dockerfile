@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow:latest-gpu
+FROM tensorflow/tensorflow
 RUN apt update -y
 RUN apt install -y libgl1-mesa-glx
 RUN pip install opencv-python Shapely Flask matplotlib scipy plumbum numpy ipython Pillow
